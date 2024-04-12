@@ -1,0 +1,32 @@
+/* Move messages button to the left */
+
+.nm-widget-btn {
+    bottom: 1rem !important;
+    left: 1rem !important;
+    right: 1rem !important;
+    z-index: 1038 !important;
+}
+
+/* border-radius: 0.25rem */
+
+.list-group-item-secondary, .list-group-item, .list-group, .info_bar, .icms-users-profile__view .fieldset_title h3, .content_list.featured .ft_image a>img{
+    border-radius: 0.25rem !important;
+}
+
+/* border-radius: 0.5rem */
+
+.icms-bg__cover, .m-1 {
+    border-radius: 0.5rem;
+}
+
+/* Delete rules notification in messages */
+.nm-pinned-msg {
+    display: none;
+}
+
+/* Theme switch hover color change */
+
+a.text-light:hover > img, a.text-light:focus > img {
+    filter: brightness(0.8);
+    cursor: pointer;
+}
