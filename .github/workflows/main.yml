@@ -1,0 +1,13 @@
+name: Release
+on: [push]
+jobs:
+  build:
+    runs-on: x64
+    steps:
+    - uses: actions/checkout@master
+    - name: Release
+      uses: thedoctor0/zip-release@0.7.6
+      with:
+        type: 'zip'
+        filename: 'release.zip'
+        exclusions: '*.git'
