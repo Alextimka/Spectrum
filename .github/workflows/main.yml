@@ -10,7 +10,8 @@ jobs:
       with:
         type: 'zip'
         filename: 'Spectrum.zip'
-        exclusions: '*.git* '
+        exclusions: '*.git* README.md LICENSE'
+        
     - name: Create Release
       uses: ncipollo/release-action@v1.14.0
       with:
