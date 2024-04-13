@@ -216,9 +216,6 @@ a,
 #nm-composer {
 	border-top: solid 1px #0f354d;
 }
-.conversation-inner {
-	overflow-y: hidden;
-}
 
 /* nm messages */
 .conversation-item.item-right .conversation-body {
