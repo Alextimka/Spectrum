@@ -44,7 +44,8 @@ option,
 .close,
 .close:hover,
 body,
-.tox-collection__item-label > * {
+.tox-collection__item-label > *,
+.tox .tox-statusbar__path-item {
 	color: #fff !important;
 }
 .btn-primary,
@@ -178,7 +179,8 @@ a,
 #nm-userlist li:hover,
 .nm-dialog-input-content-editable,
 #nm-msg-loading,
-.nm-inp-c-bl {
+.nm-inp-c-bl,
+.tox .tox-statusbar {
 	background-color: #1b1b1b !important;
 }
 .conversation-item.new {
