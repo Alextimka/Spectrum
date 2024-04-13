@@ -3,15 +3,16 @@
 Spectrum is a browser extension that improves the spectr39s.ru website
 
 <h2>Dark theme</h2>
-![dark-theme](https://github.com/Alextimka/Spectrum/assets/59509074/97281ab2-6bb6-4cf7-81db-fb06b8ad185c)
-<br><br><br>
+<img src="https://github.com/Alextimka/Spectrum/assets/59509074/39fb54aa-7236-4a6d-b361-3a5abc83c4b5">
+<br><br>
 <h2>Quality of life fixes</h2>
 <p>No messenger button bug</p>
-![image](https://github.com/Alextimka/Spectrum/assets/59509074/ecf78540-bb24-4952-aa90-6dd148c38358)
-<br><br>
-<p>No rules notification</p>
-![image](https://github.com/Alextimka/Spectrum/assets/59509074/0ac64b59-71d2-4168-a443-6f65c187da93)
-<br><br>
-<p>Rounded edges</p>
-![image](https://github.com/Alextimka/Spectrum/assets/59509074/3cea7445-c5e9-406b-9f2d-4a3d5e42aae3)
+<img src="https://github.com/Alextimka/Spectrum/assets/59509074/8bb337f3-c569-42fa-a02d-9c2b84ee85f6">
 
+<br>
+<p>No rules notification</p>
+<img src="https://github.com/Alextimka/Spectrum/assets/59509074/a0d3e22d-d5bd-42e6-ba6c-0c7f3db9a971">
+
+<br>
+<p>Rounded edges</p>
+<img src="https://github.com/Alextimka/Spectrum/assets/59509074/0d3784f8-17d6-4260-a9aa-20f57e6e32b7">
