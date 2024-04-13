@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const setCookie = (name, value, days) => {
-	const expires = `; expires=${new Date(Date.now() + days * 864e5).toUTCString()}`;
+	const expires = `; expires=${new Date(
+		Date.now() + days * 864e5
+	).toUTCString()}`;
 	document.cookie = `${name}=${value}${expires}; path=/`;
 };
 
@@ -20,9 +22,9 @@ const getCookie = (name) => {
 	}
 	return null;
 };
-let themeid
+let themeid;
 tempcookie = getCookie("themeid");
-if (tempcookie == null || tempcookie == "NaN"){
+if (tempcookie == null || tempcookie == "NaN") {
 	setCookie("themeid", 0, 364);
 	themeid = 0;
 } else {
@@ -35,7 +37,6 @@ const switchTheme = () => {
 	location.reload();
 };
 
-
 const link = document.createElement("link");
 link.type = "text/css";
 link.rel = "stylesheet";
@@ -43,7 +44,9 @@ link.href = chrome.runtime.getURL("css/dark.css");
 
 const thswitch = document.createElement("a");
 thswitch.classList.add("text-light", "ml-2");
-thswitch.innerHTML = `<img src="${chrome.runtime.getURL(`icons/${themeid == 1 ? 'dark' : 'light'}.svg`)}">`;
+thswitch.innerHTML = `<img src="${chrome.runtime.getURL(
+	`icons/${themeid == 1 ? "dark" : "light"}.svg`
+)}">`;
 thswitch.addEventListener("click", switchTheme);
 
 if (themeid == 1) {
@@ -60,5 +63,3 @@ var checkthemeicon = setInterval(() => {
 		document.querySelector(".py-2").appendChild(thswitch);
 	}
 }, 1);
-
-
