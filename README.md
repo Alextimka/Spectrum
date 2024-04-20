@@ -1,6 +1,6 @@
 # Spectrum
 
-Spectrum это расширение для сайта spectr39s.ru который добавляет новые функции и улучшает старые
+Расширение Spectrum добавляет новые функции для сайта spectr39s.ru
 
 <h2>Темная тема</h2>
 <img src="https://github.com/Alextimka/Spectrum/assets/59509074/39fb54aa-7236-4a6d-b361-3a5abc83c4b5">
