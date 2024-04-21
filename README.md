@@ -1,9 +1,9 @@
-[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/Alextimka/Spectrum/blob/master/README.md)
-[![ru](https://img.shields.io/badge/lang-ru-green.svg)](https://github.com/Alextimka/Spectrum/blob/master/README/README.ru.md)
+[![en](https://img.shields.io/badge/lang-EN-red.svg?label=)](https://github.com/Alextimka/Spectrum/blob/master/README.md)
+[![ru](https://img.shields.io/badge/lang-RU-green.svg?label=)](https://github.com/Alextimka/Spectrum/blob/master/README/README.ru.md)
 # Spectrum
 
-[![GitHub Release](https://img.shields.io/github/v/release/Alextimka/Spectrum?style=flat&logo=github)](https://github.com/Alextimka/Spectrum/releases/latest/download/Spectrum.zip)
-![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/Alextimka/Spectrum/total?color=red)
+[![GitHub Release](https://img.shields.io/github/v/release/Alextimka/Spectrum?label=&style=flat&logo=github)](https://github.com/Alextimka/Spectrum/releases/latest/download/Spectrum.zip)
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/Alextimka/Spectrum/total?label=Downloads&color=red)
 
 Spectrum is a browser extension that improves the spectr39s.ru website
 
