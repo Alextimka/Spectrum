@@ -3,6 +3,7 @@
 # Spectrum
 
 [![GitHub Release](https://img.shields.io/github/v/release/Alextimka/Spectrum?style=flat&logo=github)](https://github.com/Alextimka/Spectrum/releases/latest/download/Spectrum.zip)
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/Alextimka/Spectrum/total?color=red)
 
 Расширение Spectrum добавляет новые функции для сайта spectr39s.ru
 
