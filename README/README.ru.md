@@ -1,5 +1,5 @@
 [![en](https://img.shields.io/badge/lang-en-green.svg)](https://github.com/Alextimka/Spectrum/blob/master/README.md)
-[![ru](https://img.shields.io/badge/lang-ru-red.svg)](https://github.com/Alextimka/Spectrum/blob/master/README.ru.md)
+[![ru](https://img.shields.io/badge/lang-ru-red.svg)](https://github.com/Alextimka/Spectrum/blob/master/README/README.ru.md)
 # Spectrum
 
 Расширение Spectrum добавляет новые функции для сайта spectr39s.ru
