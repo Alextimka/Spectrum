@@ -2,6 +2,8 @@
 [![ru](https://img.shields.io/badge/lang-ru-green.svg)](https://github.com/Alextimka/Spectrum/blob/master/README/README.ru.md)
 # Spectrum
 
+[![GitHub Release](https://img.shields.io/github/v/release/Alextimka/Spectrum?style=flat&logo=github)](https://github.com/Alextimka/Spectrum/releases/latest/download/Spectrum.zip)
+
 Spectrum is a browser extension that improves the spectr39s.ru website
 
 <h2>Dark theme</h2>
