@@ -2,6 +2,8 @@
 [![ru](https://img.shields.io/badge/lang-ru-red.svg)](https://github.com/Alextimka/Spectrum/blob/master/README/README.ru.md)
 # Spectrum
 
+[![GitHub Release](https://img.shields.io/github/v/release/Alextimka/Spectrum?style=flat&logo=github)](https://github.com/Alextimka/Spectrum/releases/latest/download/Spectrum.zip)
+
 Расширение Spectrum добавляет новые функции для сайта spectr39s.ru
 
 <h2>Темная тема</h2>
