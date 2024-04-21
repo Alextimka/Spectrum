@@ -1,5 +1,5 @@
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/Alextimka/Spectrum/blob/master/README.md)
-[![ru](https://img.shields.io/badge/lang-ru-green.svg)](https://github.com/Alextimka/Spectrum/blob/master/README.ru.md)
+[![ru](https://img.shields.io/badge/lang-ru-green.svg)](https://github.com/Alextimka/Spectrum/blob/master/README/README.ru.md)
 # Spectrum
 
 Spectrum is a browser extension that improves the spectr39s.ru website
