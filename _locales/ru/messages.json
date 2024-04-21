@@ -6,5 +6,9 @@
 	"creditTitle": {
 		"message": "GitHub расширения Spectrum",
 		"description": "Описание ссылки на GitHub"
+	},
+	"creditImg": {
+		"message": "Устаревшее",
+		"descripiton": "Проверяет если расширение устарело"
 	}
 }

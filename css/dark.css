@@ -288,9 +288,9 @@ a,
 .icms-users-profile__view .fieldset_title h3 {
 	padding-left: 15px !important;
 }
-.card {
-	background-color: #2e2e2e;
-	border: 1px solid rgb(255 255 255 / 40%);
+#widget_wrapper_150, #widget_wrapper_153 {
+	background-color: #2e2e2e !important;
+	border: 1px solid rgb(255 255 255 / 40%) !important;
 }
 .info_bar {
 	background-color: #2e2e2e !important;

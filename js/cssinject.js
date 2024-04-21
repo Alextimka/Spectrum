@@ -24,13 +24,31 @@ const switchTheme = () => {
 	location.reload();
 };
 
+// Get latest version
+async function latest() {
+	let ver = await fetch("https://api.github.com/repos/Alextimka/Spectrum/tags")
+		.then((response) => response.json())
+		.then((json) => json[0].name);
+	ver = parseFloat(ver.substr(ver.length - 3))
+	return ver
+}
 // Insert features function
 function insert() {
 	try {
 		// Append theme switch
 		document.querySelector(".py-2").appendChild(thswitch);
+	} catch {}
+}
+async function insertAfter() {
+	try {
+		// Check if a newer version is available
+		if (currVer < (await latest())) {
+			credText += `%20(${chrome.i18n.getMessage("creditImg")})`;
+		}
+		creditImg.src = `https://img.shields.io/badge/Spectrum%20v${credText}-4d4d4d?logo=github`;
 
 		// Append credit
+		credit.append(creditImg);
 		document
 			.getElementsByClassName(
 				"d-flex align-items-center text-muted icms-links-inherit-color"
@@ -71,19 +89,6 @@ if (themeid == 1) {
 // Hide the page until it is fully loaded
 document.documentElement.style.visibility = "hidden";
 
-// Credit image
-const creditImg = document.createElement("img");
-creditImg.src = `https://img.shields.io/badge/Spectrum%20${
-	chrome.runtime.getManifest().version
-}-4d4d4d?logo=github`;
-
-// Spectrum credit at the bottom
-let credit = document.createElement("a");
-credit.href = "https://github.com/Alextimka/Spectrum";
-credit.target = "_blank";
-credit.append(creditImg);
-credit.title = chrome.i18n.getMessage("creditTitle");
-
 // Theme switch svg
 const themeSvg = document.createElement("img");
 themeSvg.src = chrome.runtime.getURL(
@@ -96,10 +101,23 @@ thswitch.classList.add("text-light", "ml-2");
 thswitch.append(themeSvg);
 thswitch.addEventListener("click", switchTheme);
 
+// Spectrum credit at the bottom
+let credit = document.createElement("a");
+credit.href = "https://github.com/Alextimka/Spectrum";
+credit.target = "_blank";
+credit.title = chrome.i18n.getMessage("creditTitle");
+
+// Credit image
+var credText = chrome.runtime.getManifest().version;
+const currVer = parseFloat(credText.substr(credText.length - 3));
+const creditImg = document.createElement("img");
+
+
 // Show the page when it is fully loaded and append features
 document.addEventListener("DOMContentLoaded", function () {
 	setTimeout(() => {
 		insert();
 		document.documentElement.style.visibility = "";
+		insertAfter();
 	}, 150);
 });

@@ -6,5 +6,9 @@
 	"creditTitle": {
 		"message": "Spectrum extenstion GitHub",
 		"description": "GitHub link descripiton"
+	},
+	"creditImg": {
+		"message": "Outdated",
+		"descripiton": "Checks if the extension version is outdated"
 	}
 }
