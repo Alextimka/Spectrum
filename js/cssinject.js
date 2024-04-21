@@ -1,12 +1,12 @@
 // Cookie functions
-const setCookie = (name, value, days) => {
+function setCookie(name, value, days) {
 	const expires = `; expires=${new Date(
 		Date.now() + days * 864e5
 	).toUTCString()}`;
 	document.cookie = `${name}=${value}${expires}; path=/`;
-};
+}
 
-const getCookie = (name) => {
+function getCookie(name) {
 	const nameEQ = `${name}=`;
 	const cookies = document.cookie.split(";");
 	for (const c of cookies) {
@@ -14,23 +14,25 @@ const getCookie = (name) => {
 		if (trimmed.startsWith(nameEQ)) return trimmed.slice(nameEQ.length);
 	}
 	return null;
-};
+}
 
 // Switch between 0 and 1 function
 // 0 - Light; 1 - Dark
-const switchTheme = () => {
+function switchTheme() {
 	themeid = (themeid + 1) % 2;
 	setCookie("themeid", themeid, 364);
 	location.reload();
-};
+}
 
 // Get latest version
 async function latest() {
-	let ver = await fetch("https://api.github.com/repos/Alextimka/Spectrum/tags")
+	let ver = await fetch(
+		"https://api.github.com/repos/Alextimka/Spectrum/tags"
+	)
 		.then((response) => response.json())
 		.then((json) => json[0].name);
-	ver = parseFloat(ver.substr(ver.length - 3))
-	return ver
+	ver = parseFloat(ver.substr(ver.length - 3));
+	return ver;
 }
 // Insert features function
 function insert() {
@@ -111,7 +113,6 @@ credit.title = chrome.i18n.getMessage("creditTitle");
 var credText = chrome.runtime.getManifest().version;
 const currVer = parseFloat(credText.substr(credText.length - 3));
 const creditImg = document.createElement("img");
-
 
 // Show the page when it is fully loaded and append features
 document.addEventListener("DOMContentLoaded", function () {
