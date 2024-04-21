@@ -73,7 +73,9 @@ document.documentElement.style.visibility = "hidden";
 
 // Credit image
 const creditImg = document.createElement("img");
-creditImg.src = "https://img.shields.io/badge/Spectrum-4d4d4d?logo=github";
+creditImg.src = `https://img.shields.io/badge/Spectrum%20${
+	chrome.runtime.getManifest().version
+}-4d4d4d?logo=github`;
 
 // Spectrum credit at the bottom
 let credit = document.createElement("a");
