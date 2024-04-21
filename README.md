@@ -25,6 +25,12 @@ Spectrum is a browser extension that improves the spectr39s.ru website
 <p>Rounded edges</p>
 
 ![image](https://github.com/Alextimka/Spectrum/assets/59509074/0d3784f8-17d6-4260-a9aa-20f57e6e32b7)
+
+<br>
+<p>Version check</p>
+
+![image](https://github.com/Alextimka/Spectrum/assets/59509074/771f6d1e-36c0-4d23-9113-ffdf083e36e9)
+
 <h2>How to install</h2>
 
 ![image](https://github.com/Alextimka/Spectrum/assets/59509074/e0f06eca-55c0-487d-aa89-9893231a774f)
