@@ -71,11 +71,15 @@ if (themeid == 1) {
 // Hide the page until it is fully loaded
 document.documentElement.style.visibility = "hidden";
 
+// Credit image
+const creditImg = document.createElement("img");
+creditImg.src = "https://img.shields.io/badge/Spectrum-4d4d4d?logo=github";
+
 // Spectrum credit at the bottom
 let credit = document.createElement("a");
 credit.href = "https://github.com/Alextimka/Spectrum";
 credit.target = "_blank";
-credit.innerHTML = "Spectrum";
+credit.append(creditImg);
 credit.title = chrome.i18n.getMessage("creditTitle");
 
 // Theme switch svg
