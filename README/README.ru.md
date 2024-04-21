@@ -26,6 +26,10 @@
 
 ![image](https://github.com/Alextimka/Spectrum/assets/59509074/0d3784f8-17d6-4260-a9aa-20f57e6e32b7)
 
+<br>
+<p>Авто проверка версии</p>
+
+![image](https://github.com/Alextimka/Spectrum/assets/59509074/25c01681-1db0-4c77-9109-f9fa3b852796)
 
 <h2>Как установить</h2>
 
