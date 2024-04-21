@@ -1,0 +1,10 @@
+{
+	"extDesc": {
+		"message": "Добавляет новые функции для сайта spectr39s.ru",
+		"description": "Описание расширения"
+	},
+	"creditTitle": {
+		"message": "GitHub расширения Spectrum",
+		"description": "Описание ссылки на GitHub"
+	}
+}

@@ -42,7 +42,12 @@ function insert() {
 // If cookie is null or NaN reset back to 0
 let themeid;
 tempcookie = getCookie("themeid");
-if (tempcookie == null || tempcookie == "NaN" || tempcookie > 1 || tempcookie < 0) {
+if (
+	tempcookie == null ||
+	tempcookie == "NaN" ||
+	tempcookie > 1 ||
+	tempcookie < 0
+) {
 	setCookie("themeid", 0, 364);
 	themeid = 0;
 } else {
@@ -71,13 +76,18 @@ let credit = document.createElement("a");
 credit.href = "https://github.com/Alextimka/Spectrum";
 credit.target = "_blank";
 credit.innerHTML = "Spectrum";
+credit.title = chrome.i18n.getMessage("creditTitle");
+
+// Theme switch svg
+const themeSvg = document.createElement("img");
+themeSvg.src = chrome.runtime.getURL(
+	`icons/${themeid == 1 ? "dark" : "light"}.svg`
+);
 
 // Theme switch
 const thswitch = document.createElement("a");
 thswitch.classList.add("text-light", "ml-2");
-thswitch.innerHTML = `<img src="${chrome.runtime.getURL(
-	`icons/${themeid == 1 ? "dark" : "light"}.svg`
-)}">`;
+thswitch.append(themeSvg);
 thswitch.addEventListener("click", switchTheme);
 
 // Show the page when it is fully loaded and append features
