@@ -1,5 +1,5 @@
-[![en](https://img.shields.io/badge/lang-EN-red.svg?label=)](https://github.com/Alextimka/Spectrum/blob/master/README.md)
-[![ru](https://img.shields.io/badge/lang-RU-green.svg?label=)](https://github.com/Alextimka/Spectrum/blob/master/README/README.ru.md)
+[![en](https://img.shields.io/badge/lang-EN-red.svg?label=)](https://github.com/Alextimka/Spectrum/blob/main/README.md)
+[![ru](https://img.shields.io/badge/lang-RU-green.svg?label=)](https://github.com/Alextimka/Spectrum/blob/main/README/README.ru.md)
 # Spectrum
 
 [![GitHub Release](https://img.shields.io/github/v/release/Alextimka/Spectrum?label=&style=flat&logo=github)](https://github.com/Alextimka/Spectrum/releases/latest/download/Spectrum.zip)
