@@ -105,7 +105,7 @@ thswitch.addEventListener("click", switchTheme);
 
 // Spectrum credit at the bottom
 let credit = document.createElement("a");
-credit.href = "https://github.com/Alextimka/Spectrum";
+credit.href = chrome.i18n.getMessage("creditUrl");
 credit.target = "_blank";
 credit.title = chrome.i18n.getMessage("creditTitle");
 

@@ -10,5 +10,9 @@
 	"creditImg": {
 		"message": "Устаревшее",
 		"descripiton": "Проверяет если расширение устарело"
+	},
+	"creditUrl": {
+		"message": "https://github.com/Alextimka/Spectrum/blob/main/README/README.ru.md",
+		"descripiton": "Ссылка на русский README.ru.md"
 	}
 }

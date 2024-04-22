@@ -10,5 +10,9 @@
 	"creditImg": {
 		"message": "Outdated",
 		"descripiton": "Checks if the extension version is outdated"
+	},
+	"creditUrl": {
+		"message": "https://github.com/Alextimka/Spectrum",
+		"descripiton": "Link to english README.md"
 	}
 }
