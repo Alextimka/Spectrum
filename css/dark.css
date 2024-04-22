@@ -52,7 +52,8 @@ body,
 .tox .tox-textarea,
 .tox .tox-textfield,
 .tox .tox-toolbar-textfield,
-.tox .tox-dropzone p {
+.tox .tox-dropzone p,
+pre {
 	color: #fff !important;
 }
 .btn-primary,
@@ -108,7 +109,10 @@ html .ui-button.ui-state-disabled:active,
 .tox .tox-textfield,
 .tox .tox-toolbar-textfield,
 .tox .tox-textarea:focus,
-.tox .tox-textfield:focus {
+.tox .tox-textfield:focus,
+.spoiler > input + label,
+.spoiler > .spoiler_body,
+.bb_tag_code {
 	background-color: #252525 !important;
 }
 
@@ -266,9 +270,6 @@ a.text-dark:hover,
 }
 .conversation-body:after {
 	border-color: #313131 transparent transparent transparent !important;
-}
-.bb_tag_code {
-	background-color: #c1c1c1 !important;
 }
 
 /* nm emojis and buttons */
