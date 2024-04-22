@@ -7,6 +7,8 @@
 
 Spectrum is a browser extension that improves the spectr39s.ru website
 
+Tested on Chrome and Edge
+
 <h2>Dark theme</h2>
 
 ![image](https://github.com/Alextimka/Spectrum/assets/59509074/39fb54aa-7236-4a6d-b361-3a5abc83c4b5)
