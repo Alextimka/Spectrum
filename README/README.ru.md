@@ -7,6 +7,8 @@
 
 Расширение Spectrum добавляет новые функции для сайта spectr39s.ru
 
+Протестировано на Chrome и Edge
+
 <h2>Темная тема</h2>
 
 ![image](https://github.com/Alextimka/Spectrum/assets/59509074/39fb54aa-7236-4a6d-b361-3a5abc83c4b5)
