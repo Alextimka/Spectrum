@@ -1,3 +1,10 @@
+// Check the browser
+if (typeof browser === "undefined") {
+    var browser = chrome;
+} else {
+	console.log(typeof browser);
+}
+
 // Cookie functions
 function setCookie(name, value, days) {
 	const expires = `; expires=${new Date(
@@ -45,7 +52,7 @@ async function insertAfter() {
 	try {
 		// Check if a newer version is available
 		if (currVer < (await latest())) {
-			credText += `%20(${chrome.i18n.getMessage("creditImg")})`;
+			credText += `%20(${browser.i18n.getMessage("creditImg")})`;
 		}
 		creditImg.src = `https://img.shields.io/badge/Spectrum%20v${credText}-4d4d4d?logo=github`;
 
@@ -79,7 +86,7 @@ if (themeid == 1) {
 	const link = document.createElement("link");
 	link.type = "text/css";
 	link.rel = "stylesheet";
-	link.href = chrome.runtime.getURL("css/dark.css");
+	link.href = browser.runtime.getURL("css/dark.css");
 	var checkhead = setInterval(() => {
 		if (document.head) {
 			clearInterval(checkhead);
@@ -93,7 +100,7 @@ document.documentElement.style.visibility = "hidden";
 
 // Theme switch svg
 const themeSvg = document.createElement("img");
-themeSvg.src = chrome.runtime.getURL(
+themeSvg.src = browser.runtime.getURL(
 	`icons/${themeid == 1 ? "dark" : "light"}.svg`
 );
 
@@ -105,12 +112,12 @@ thswitch.addEventListener("click", switchTheme);
 
 // Spectrum credit at the bottom
 let credit = document.createElement("a");
-credit.href = chrome.i18n.getMessage("creditUrl");
+credit.href = browser.i18n.getMessage("creditUrl");
 credit.target = "_blank";
-credit.title = chrome.i18n.getMessage("creditTitle");
+credit.title = browser.i18n.getMessage("creditTitle");
 
 // Credit image
-var credText = chrome.runtime.getManifest().version;
+var credText = browser.runtime.getManifest().version;
 const currVer = parseFloat(credText.substr(credText.length - 3));
 const creditImg = document.createElement("img");
 
