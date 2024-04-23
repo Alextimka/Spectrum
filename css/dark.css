@@ -53,12 +53,27 @@ body,
 .tox .tox-textfield,
 .tox .tox-toolbar-textfield,
 .tox .tox-dropzone p,
-pre {
+pre,
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
 	color: #fff !important;
 }
 .btn-primary,
 .btn-warning,
-.nav-pills .nav-link.active {
+.nav-pills .nav-link.active,
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight,
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
 	color: #1e2224 !important;
 }
 
@@ -74,7 +89,14 @@ pre {
 /* border: 1px solid #858585 */
 .form-control,
 .icms-user-menu {
-	border: 1px solid #858585 !important;
+	border: 1px solid rgba(133, 133, 133, 0.7) !important;
+}
+
+/* border-color: white 50% */
+
+.btn-light,
+.nm-emoji-tooltip {
+	border-color: rgba(255, 255, 255, 0.5) !important;
 }
 
 /* background-color: #373737 */
@@ -112,12 +134,12 @@ html .ui-button.ui-state-disabled:active,
 .tox .tox-textfield:focus,
 .spoiler > input + label,
 .spoiler > .spoiler_body,
-.bb_tag_code {
+.bb_tag_code,
+.dropdown-menu {
 	background-color: #252525 !important;
 }
 
 /* background-color: #1b1b1b */
-.dropdown-menu,
 .form-control,
 .icms-users-profile__view .fieldset_title h3,
 .list-group-item-secondary,
@@ -253,8 +275,11 @@ a.text-dark:hover,
 	border-top: solid 1px #0f354d;
 }
 
-/* background-color: #2e2e2e */
+#nm-overlay {
+	background-color: #1b1b1b80;
+}
 
+/* background-color: #2e2e2e */
 #widget_wrapper_150,
 #widget_wrapper_153,
 .info_bar {
@@ -325,7 +350,7 @@ a.text-dark:hover,
 	border: 1px solid #ffffff66 !important;
 }
 .info_bar {
-	border-top: none;
+	border-top: none !important;
 	padding: 3px 6px 3px 6px !important;
 }
 .btn .mb-3 .btn-info {
@@ -334,6 +359,10 @@ a.text-dark:hover,
 }
 .rate-disabled {
 	filter: invert(0.7);
+}
+.ui-icon-circle-triangle-w,
+.ui-icon-circle-triangle-e {
+	filter: invert(1);
 }
 .redactor_dropdown {
 	box-shadow: 0 1px 5px #000000;
@@ -374,4 +403,10 @@ a.text-dark:hover,
 .icms-header__top,
 .icms-footer__bottom {
 	background-color: #1f242a !important;
+}
+.btn-outline-info {
+	border-color: #0abde380;
+}
+.btn-outline-success {
+    border-color: #33bd66b0;
 }

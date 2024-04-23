@@ -1,6 +1,6 @@
 // Check the browser
 if (typeof browser === "undefined") {
-    var browser = chrome;
+	var browser = chrome;
 }
 
 // Cookie functions

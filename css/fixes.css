@@ -19,7 +19,7 @@
 /* border-radius: 0.5rem */
 .icms-bg__cover,
 .m-1,
-.conversation-body>.msg-content .bb_tag_code {
+.conversation-body > .msg-content .bb_tag_code {
 	border-radius: 0.5rem;
 }
 
