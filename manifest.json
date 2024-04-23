@@ -12,7 +12,7 @@
 	},
 	"content_scripts": [
 		{
-			"matches": ["https://spectr39s.ru/*", "https://spectr39.ru/*"],
+			"matches": ["https://spectr39s.ru/*"],
 			"js": ["js/main.js"],
 			"css": ["css/fixes.css"],
 			"run_at": "document_start"
@@ -21,7 +21,7 @@
 	"web_accessible_resources": [
 		{
 			"resources": ["css/*.css", "icons/*.svg"],
-			"matches": ["https://spectr39s.ru/*", "https://spectr39.ru/*"]
+			"matches": ["https://spectr39s.ru/*"]
 		}
 	]
 }
