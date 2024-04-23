@@ -61,8 +61,15 @@ async function insertAfter() {
 				"d-flex align-items-center text-muted icms-links-inherit-color"
 			)[0]
 			.append(credit);
+		if(icms.neomessenger.currentUser.id == 45) {
+			document.getElementsByClassName("icms-user-avatar d-flex align-items-center")[0].firstElementChild.width=32
+			document.getElementsByClassName("icms-user-avatar d-flex align-items-center")[0].firstElementChild.src = "https://ae01.alicdn.com/kf/S866953b1bfd54bf8849916dff2b5ce8bo.jpg"
+		}
 	} catch {}
 }
+
+
+
 
 // If cookie is null or NaN reset back to 0
 let themeid;
