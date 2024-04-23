@@ -12,8 +12,7 @@
 .list-group,
 .info_bar,
 .icms-users-profile__view .fieldset_title h3,
-.content_list.featured .ft_image a > img,
-.content_list.featured .ft_image a > img:hover{
+.content_list.featured .ft_image a > img{
 	border-radius: 0.25rem !important;
 }
 
