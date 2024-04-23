@@ -1,9 +1,8 @@
 /* Move messages button to the left */
-.nm-widget-btn {
-	bottom: 1rem !important;
-	left: 1rem !important;
-	right: 1rem !important;
-	z-index: 1038 !important;
+#scroll-top {
+	/* left: 1rem !important;
+	right: unset !important; */
+	right: 5rem !important;
 }
 
 /* border-radius: 0.25rem */
@@ -11,15 +10,16 @@
 .list-group-item,
 .list-group,
 .info_bar,
-.icms-users-profile__view .fieldset_title h3,
-.content_list.featured .ft_image a > img{
+.icms-users-profile__view .fieldset_title h3 {
 	border-radius: 0.25rem !important;
 }
 
 /* border-radius: 0.5rem */
 .icms-bg__cover,
 .m-1,
-.conversation-body > .msg-content .bb_tag_code {
+.conversation-body > .msg-content .bb_tag_code,
+.content_list.featured .ft_image a,
+.carousel-inner {
 	border-radius: 0.5rem;
 }
 

@@ -21,6 +21,19 @@ function getCookie(name) {
 	return null;
 }
 
+// Check if user is logged in using the avatar element
+function isLoggedIn() {
+	if (
+		document.getElementsByClassName(
+			"icms-user-avatar d-flex align-items-center"
+		)[0]
+	) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
 // Switch between 0 and 1 function
 // 0 - Light; 1 - Dark
 function switchTheme() {
@@ -39,14 +52,25 @@ async function latest() {
 	ver = parseFloat(ver.substr(ver.length - 3));
 	return ver;
 }
+
 // Insert features function
 function insert() {
 	try {
 		// Append theme switch
-		document.querySelector(".py-2").appendChild(thswitch);
+		if (isLoggedIn()) {
+			document.querySelector(".py-2").appendChild(thswitch);
+		}
 	} catch {}
 }
+
 async function insertAfter() {
+	try {
+		if (!isLoggedIn() && themeid != 0) {
+			themeid = 0;
+			setCookie("themeid", 0, 364);
+			location.reload();
+		}
+	} catch {}
 	try {
 		// Check if a newer version is available
 		if (currVer < (await latest())) {
@@ -56,23 +80,27 @@ async function insertAfter() {
 
 		// Append credit
 		credit.append(creditImg);
+	} catch {}
+	try {
 		document
 			.getElementsByClassName(
 				"d-flex align-items-center text-muted icms-links-inherit-color"
 			)[0]
 			.append(credit);
-		try {
-			if(document.getElementsByClassName("icms-user-avatar d-flex align-items-center")[0].firstElementChild.src.split("/")[5].substr(1) == 45) {
-				document.body.style = 'background-image: url("https://media.tenor.com/ptNG8DQFPD4AAAAj/explotion-explode.gif")';
-				document.getElementsByClassName("icms-user-avatar d-flex align-items-center")[0].firstElementChild.width = 32;
-				document.getElementsByClassName("icms-user-avatar d-flex align-items-center")[0].firstElementChild.src = "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQh9cRZvd4lV9a-bPDB4jqBhliXbM8hZcoW-aSJwY5WG0P1UzKa";
-			}
-		} catch {}
+	} catch {}
+	try {
+		var avatar = document.getElementsByClassName(
+			"icms-user-avatar d-flex align-items-center"
+		)[0].firstElementChild;
+		if (avatar.src.split("/")[5].substr(1) == 45) {
+			document.body.style =
+				'background-image: url("https://media.tenor.com/ptNG8DQFPD4AAAAj/explotion-explode.gif")';
+			avatar.width = 32;
+			avatar.src =
+				"https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQh9cRZvd4lV9a-bPDB4jqBhliXbM8hZcoW-aSJwY5WG0P1UzKa";
+		}
 	} catch {}
 }
-
-
-
 
 // If cookie is null or NaN reset back to 0
 let themeid;
@@ -121,8 +149,8 @@ thswitch.addEventListener("click", switchTheme);
 // Spectrum credit at the bottom
 let credit = document.createElement("a");
 credit.href = browser.i18n.getMessage("creditUrl");
-credit.target = "_blank";
 credit.title = browser.i18n.getMessage("creditTitle");
+credit.target = "_blank";
 
 // Credit image
 var credText = browser.runtime.getManifest().version;
