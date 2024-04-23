@@ -7,7 +7,7 @@
 
 Расширение Spectrum добавляет новые функции для сайта spectr39s.ru
 
-Протестировано на Chrome, Edge, Opera, Firefox и Yandex
+Протестировано на Chrome, Edge, Opera, Firefox и Yandex Браузер
 
 <h2>Темная тема</h2>
 
