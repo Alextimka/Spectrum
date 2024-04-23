@@ -16,7 +16,7 @@ Tested on Chrome, Edge, Opera, Firefox and Yandex Browser
 <h2>Quality of life fixes</h2>
 <p>No messenger button bug</p>
 
-![image](https://github.com/Alextimka/Spectrum/assets/59509074/8bb337f3-c569-42fa-a02d-9c2b84ee85f6)
+![image](https://github.com/Alextimka/Spectrum/assets/59509074/0fa0d203-ea7e-4b7d-be0a-43c877be93ed)
 
 <br>
 <p>No rules notification</p>
