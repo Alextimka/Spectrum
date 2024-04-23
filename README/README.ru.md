@@ -16,7 +16,7 @@
 <h2>Фиксы и улучшения</h2>
 <p>Баг с кнопкой мессенжера</p>
 
-![image](https://github.com/Alextimka/Spectrum/assets/59509074/8bb337f3-c569-42fa-a02d-9c2b84ee85f6)
+![image](https://github.com/Alextimka/Spectrum/assets/59509074/bc40a350-2dd4-4793-8f41-364b364156b1)
 
 <br>
 <p>Убирает уведомление правил</p>
