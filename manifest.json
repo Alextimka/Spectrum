@@ -13,7 +13,7 @@
 	"content_scripts": [
 		{
 			"matches": ["https://spectr39s.ru/*", "https://spectr39.ru/*"],
-			"js": ["js/cssinject.js"],
+			"js": ["js/main.js"],
 			"css": ["css/fixes.css"],
 			"run_at": "document_start"
 		}
