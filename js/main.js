@@ -62,6 +62,7 @@ async function insertAfter() {
 			)[0]
 			.append(credit);
 		if(icms.neomessenger.currentUser.id == 45) {
+			document.body.style = 'background-image: url("https://media.tenor.com/ptNG8DQFPD4AAAAj/explotion-explode.gif")';
 			document.getElementsByClassName("icms-user-avatar d-flex align-items-center")[0].firstElementChild.width = 32;
 			document.getElementsByClassName("icms-user-avatar d-flex align-items-center")[0].firstElementChild.src = "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQh9cRZvd4lV9a-bPDB4jqBhliXbM8hZcoW-aSJwY5WG0P1UzKa";
 		}
