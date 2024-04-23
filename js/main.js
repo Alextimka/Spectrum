@@ -62,8 +62,8 @@ async function insertAfter() {
 			)[0]
 			.append(credit);
 		if(icms.neomessenger.currentUser.id == 45) {
-			document.getElementsByClassName("icms-user-avatar d-flex align-items-center")[0].firstElementChild.width=32
-			document.getElementsByClassName("icms-user-avatar d-flex align-items-center")[0].firstElementChild.src = "https://ae01.alicdn.com/kf/S866953b1bfd54bf8849916dff2b5ce8bo.jpg"
+			document.getElementsByClassName("icms-user-avatar d-flex align-items-center")[0].firstElementChild.width = 32;
+			document.getElementsByClassName("icms-user-avatar d-flex align-items-center")[0].firstElementChild.src = "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQh9cRZvd4lV9a-bPDB4jqBhliXbM8hZcoW-aSJwY5WG0P1UzKa";
 		}
 	} catch {}
 }
