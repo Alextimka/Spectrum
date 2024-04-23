@@ -26,7 +26,7 @@
 <br>
 <p>Скругленные края</p>
 
-![image](https://github.com/Alextimka/Spectrum/assets/59509074/0d3784f8-17d6-4260-a9aa-20f57e6e32b7)
+![image](https://github.com/Alextimka/Spectrum/assets/59509074/b3c58ee1-59ca-413e-9f1e-72627d1c889b)
 
 <br>
 <p>Авто проверка версии</p>
