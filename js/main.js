@@ -3,6 +3,17 @@ if (typeof browser === "undefined") {
 	var browser = chrome;
 }
 
+// Get User id
+function getUserId() {
+	try {
+		return document.getElementsByClassName(
+			"icms-user-avatar d-flex align-items-center"
+		)[0].firstElementChild.src.split("/")[5].substr(1);
+	} catch {
+		return null;
+	}
+}
+
 // Cookie functions
 function setCookie(name, value, days) {
 	var expires;
