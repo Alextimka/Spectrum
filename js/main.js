@@ -70,10 +70,19 @@ async function insertAfter() {
 	try {
 		var isLogged = isLoggedIn();
 		if (!isLogged) {
-			if (getCookie("expirationTheme") == 1) {
+			var expTheme = getCookie("expirationTheme");
+			if(expTheme == 1 && themeid == 1) {
+				themeid = 0;
+				setCookie("themeid", themeid, 0);
 				setCookie("expirationTheme", 0, 364);
+				location.reload();
 			}
-			setCookie("themeid", themeid, 0);
+			if (expTheme == 1) {
+				setCookie("expirationTheme", 0, 364);
+				setCookie("themeid", themeid, 0);
+			}
+			
+			
 		} else {
 			setCookie("expirationTheme", 1, 364);
 			setCookie("themeid", themeid, 364);
