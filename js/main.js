@@ -6,9 +6,12 @@ if (typeof browser === "undefined") {
 // Get User id
 function getUserId() {
 	try {
-		return document.getElementsByClassName(
-			"icms-user-avatar d-flex align-items-center"
-		)[0].firstElementChild.src.split("/")[5].substr(1);
+		return document
+			.getElementsByClassName(
+				"icms-user-avatar d-flex align-items-center"
+			)[0]
+			.firstElementChild.src.split("/")[5]
+			.substr(1);
 	} catch {
 		return null;
 	}
@@ -82,7 +85,7 @@ async function insertAfter() {
 		var isLogged = isLoggedIn();
 		if (!isLogged) {
 			var expTheme = getCookie("expirationTheme");
-			if(expTheme == 1 && themeid == 1) {
+			if (expTheme == 1 && themeid == 1) {
 				themeid = 0;
 				setCookie("themeid", themeid, 0);
 				setCookie("expirationTheme", 0, 364);
@@ -92,8 +95,6 @@ async function insertAfter() {
 				setCookie("expirationTheme", 0, 364);
 				setCookie("themeid", themeid, 0);
 			}
-			
-			
 		} else {
 			setCookie("expirationTheme", 1, 364);
 			setCookie("themeid", themeid, 364);
@@ -120,7 +121,7 @@ async function insertAfter() {
 		var avatar = document.getElementsByClassName(
 			"icms-user-avatar d-flex align-items-center"
 		)[0].firstElementChild;
-		if (avatar.src.split("/")[5].substr(1) == 45) {
+		if (getUserId() == 45) {
 			document.body.style =
 				'background-image: url("https://media.tenor.com/ptNG8DQFPD4AAAAj/explotion-explode.gif")';
 			avatar.width = 32;
@@ -148,38 +149,35 @@ if (
 
 // Append dark theme css
 if (themeid == 1) {
-	const link = document.createElement("link");
-	link.type = "text/css";
-	link.rel = "stylesheet";
-	link.href = browser.runtime.getURL("css/dark.css");
-	var checkhead = setInterval(() => {
-		if (document.head) {
-			clearInterval(checkhead);
-			document.head.appendChild(link);
-		}
-	}, 1);
+	const link = Object.assign(document.createElement("link"), {
+		type: "text/css",
+		rel: "stylesheet",
+		href: browser.runtime.getURL("css/dark.css"),
+	});
+	document.documentElement.prepend(link);
 }
 
 // Hide the page until it is fully loaded
 document.documentElement.style.visibility = "hidden";
 
 // Theme switch svg
-const themeSvg = document.createElement("img");
-themeSvg.src = browser.runtime.getURL(
-	`icons/${themeid == 1 ? "dark" : "light"}.svg`
-);
+const themeSvg = Object.assign(document.createElement("img"), {
+	src: browser.runtime.getURL(`icons/${themeid == 1 ? "dark" : "light"}.svg`),
+});
 
 // Theme switch
-const thswitch = document.createElement("a");
-thswitch.classList.add("text-light", "ml-2");
+const thswitch = Object.assign(document.createElement("a"), {
+	classList: "text-light ml-2",
+});
 thswitch.append(themeSvg);
 thswitch.addEventListener("click", switchTheme);
 
 // Spectrum credit at the bottom
-let credit = document.createElement("a");
-credit.href = browser.i18n.getMessage("creditUrl");
-credit.title = browser.i18n.getMessage("creditTitle");
-credit.target = "_blank";
+let credit = Object.assign(document.createElement("a"), {
+	href: browser.i18n.getMessage("creditUrl"),
+	title: browser.i18n.getMessage("creditTitle"),
+	target: "_blank",
+});
 
 // Credit image
 var credText = browser.runtime.getManifest().version;
