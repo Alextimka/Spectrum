@@ -5,9 +5,14 @@ if (typeof browser === "undefined") {
 
 // Cookie functions
 function setCookie(name, value, days) {
-	const expires = `; expires=${new Date(
-		Date.now() + days * 864e5
-	).toUTCString()}`;
+	var expires;
+	if (days == 0) {
+		expires = "; expires=;";
+	} else {
+		expires = `; expires=${new Date(
+			Date.now() + days * 864e5
+		).toUTCString()}`;
+	}
 	document.cookie = `${name}=${value}${expires}; path=/`;
 }
 
@@ -57,18 +62,21 @@ async function latest() {
 function insert() {
 	try {
 		// Append theme switch
-		if (isLoggedIn()) {
-			document.querySelector(".py-2").appendChild(thswitch);
-		}
+		document.querySelector(".py-2").appendChild(thswitch);
 	} catch {}
 }
 
 async function insertAfter() {
 	try {
-		if (!isLoggedIn() && themeid != 0) {
-			themeid = 0;
-			setCookie("themeid", 0, 364);
-			location.reload();
+		var isLogged = isLoggedIn();
+		if (!isLogged) {
+			if (getCookie("expirationTheme") == 1) {
+				setCookie("expirationTheme", 0, 364);
+			}
+			setCookie("themeid", themeid, 0);
+		} else {
+			setCookie("expirationTheme", 1, 364);
+			setCookie("themeid", themeid, 364);
 		}
 	} catch {}
 	try {
@@ -112,6 +120,7 @@ if (
 	tempcookie < 0
 ) {
 	setCookie("themeid", 0, 364);
+	setCookie("expirationTheme", 1, 364);
 	themeid = 0;
 } else {
 	themeid = parseInt(tempcookie);
