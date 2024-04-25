@@ -154,7 +154,12 @@ if (themeid == 1) {
 		rel: "stylesheet",
 		href: browser.runtime.getURL("css/dark.css"),
 	});
-	document.documentElement.prepend(link);
+	var checkhead = setInterval(() => {
+		if (document.head) {
+			clearInterval(checkhead);
+			document.head.appendChild(link);
+		}
+	}, 1);
 }
 
 // Hide the page until it is fully loaded
