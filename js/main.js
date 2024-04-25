@@ -105,11 +105,13 @@ async function insertAfter() {
 		if (currVer < (await latest())) {
 			credText += `%20(${browser.i18n.getMessage("creditImg")})`;
 		}
-		creditImg.src = `https://img.shields.io/badge/Spectrum%20v${credText}-4d4d4d?logo=github`;
-
-		// Append credit
-		credit.append(creditImg);
+		
 	} catch {}
+	creditImg.src = `https://img.shields.io/badge/Spectrum%20v${credText}-4d4d4d?logo=github`;
+
+	// Append credit
+	credit.append(creditImg);
+	
 	try {
 		document
 			.getElementsByClassName(
@@ -130,6 +132,8 @@ async function insertAfter() {
 		}
 	} catch {}
 }
+// Hide the page until it is fully loaded
+document.documentElement.style.visibility = "hidden";
 
 // If cookie is null or NaN reset back to 0
 let themeid;
@@ -149,21 +153,22 @@ if (
 
 // Append dark theme css
 if (themeid == 1) {
+	const darkbg = Object.assign(document.createElement("style"), {
+		innerHTML: `html > body {
+			background-color: #1b1b1b !important;
+		}`,
+	});
 	const link = Object.assign(document.createElement("link"), {
 		type: "text/css",
 		rel: "stylesheet",
 		href: browser.runtime.getURL("css/dark.css"),
 	});
-	var checkhead = setInterval(() => {
-		if (document.head) {
-			clearInterval(checkhead);
-			document.head.appendChild(link);
-		}
-	}, 1);
-}
 
-// Hide the page until it is fully loaded
-document.documentElement.style.visibility = "hidden";
+	document.documentElement.prepend(darkbg);
+	document.addEventListener("DOMContentLoaded", () => {
+		document.head.appendChild(link);
+	});
+}
 
 // Theme switch svg
 const themeSvg = Object.assign(document.createElement("img"), {
@@ -190,10 +195,8 @@ const currVer = parseFloat(credText.substr(credText.length - 3));
 const creditImg = document.createElement("img");
 
 // Show the page when it is fully loaded and append features
-document.addEventListener("DOMContentLoaded", function () {
-	setTimeout(() => {
-		insert();
-		document.documentElement.style.visibility = "";
-		insertAfter();
-	}, 150);
-});
+window.onload = () => {
+	insert();
+	document.documentElement.style.visibility = "";
+	insertAfter();
+};

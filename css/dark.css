@@ -156,12 +156,12 @@ option,
 .nm-drop-box,
 .tox .tox-toolbar,
 .tox .tox-menu,
-body,
 .chosen-container-multi .chosen-choices,
 .tox .tox-dialog,
 .tox .tox-dialog__header,
 .tox .tox-dialog__footer,
-.tox .tox-dropzone {
+.tox .tox-dropzone,
+.nm-body {
 	background-color: #1b1b1b !important;
 }
 .btn-light,
@@ -423,4 +423,7 @@ a.text-dark:hover,
 .chosen-container-single .chosen-single abbr {
 	background-color: transparent !important;
 	box-shadow: none !important;
+}
+#nm-overlay {
+	backdrop-filter: blur(3px);
 }
