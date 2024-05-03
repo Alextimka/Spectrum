@@ -428,5 +428,13 @@ a.text-dark:hover,
 	backdrop-filter: blur(3px);
 }
 img[src="/templates/modern/images/404.svg"] {
+<<<<<<< Updated upstream
     filter: invert(1) hue-rotate(347deg);
+=======
+<<<<<<< HEAD
+    filter: invert(1) hue-rotate(140deg);
+=======
+    filter: invert(1) hue-rotate(347deg);
+>>>>>>> bebbc1f30be6e2ac2d9d812ec163d307976b15c5
+>>>>>>> Stashed changes
 }

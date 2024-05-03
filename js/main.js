@@ -41,8 +41,18 @@ function getCookie(name) {
 function isLoggedIn() {
 	if (
 		document.getElementsByClassName("nav-item profile")[0] ||
+<<<<<<< Updated upstream
 		window.location.pathname.split("/")[1] == "upload" ||
 		document.title == "Страница не найдена"
+=======
+<<<<<<< HEAD
+		document.title == "Страница не найдена" ||
+		window.location.pathname.split("/")[1] == "upload"
+=======
+		window.location.pathname.split("/")[1] == "upload" ||
+		document.title == "Страница не найдена"
+>>>>>>> bebbc1f30be6e2ac2d9d812ec163d307976b15c5
+>>>>>>> Stashed changes
 	) {
 		return true;
 	} else {
