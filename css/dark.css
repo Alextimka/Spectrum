@@ -427,3 +427,6 @@ a.text-dark:hover,
 #nm-overlay {
 	backdrop-filter: blur(3px);
 }
+img[src="/templates/modern/images/404.svg"] {
+    filter: invert(1) hue-rotate(347deg);
+}

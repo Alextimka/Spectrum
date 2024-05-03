@@ -7,11 +7,8 @@ if (typeof browser === "undefined") {
 function getUserId() {
 	try {
 		return document
-			.getElementsByClassName(
-				"icms-user-avatar d-flex align-items-center"
-			)[0]
-			.firstElementChild.src.split("/")[5]
-			.substr(1);
+			.getElementsByClassName("nav-item profile")[0]
+			.firstElementChild.href.split("/")[4];
 	} catch {
 		return null;
 	}
@@ -43,9 +40,9 @@ function getCookie(name) {
 // Check if user is logged in using the avatar element
 function isLoggedIn() {
 	if (
-		document.getElementsByClassName(
-			"icms-user-avatar d-flex align-items-center"
-		)[0]
+		document.getElementsByClassName("nav-item profile")[0] ||
+		window.location.pathname.split("/")[1] == "upload" ||
+		document.title == "Страница не найдена"
 	) {
 		return true;
 	} else {
@@ -105,31 +102,18 @@ async function insertAfter() {
 		if (currVer < (await latest())) {
 			credText += `%20(${browser.i18n.getMessage("creditImg")})`;
 		}
-		
 	} catch {}
 	creditImg.src = `https://img.shields.io/badge/Spectrum%20v${credText}-4d4d4d?logo=github`;
 
 	// Append credit
 	credit.append(creditImg);
-	
+
 	try {
 		document
 			.getElementsByClassName(
 				"d-flex align-items-center text-muted icms-links-inherit-color"
 			)[0]
 			.append(credit);
-	} catch {}
-	try {
-		var avatar = document.getElementsByClassName(
-			"icms-user-avatar d-flex align-items-center"
-		)[0].firstElementChild;
-		if (getUserId() == 45) {
-			document.body.style =
-				'background-image: url("https://media.tenor.com/ptNG8DQFPD4AAAAj/explotion-explode.gif")';
-			avatar.width = 32;
-			avatar.src =
-				"https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQh9cRZvd4lV9a-bPDB4jqBhliXbM8hZcoW-aSJwY5WG0P1UzKa";
-		}
 	} catch {}
 }
 // Hide the page until it is fully loaded
