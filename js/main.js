@@ -40,7 +40,7 @@ function getCookie(name) {
 // Check if user is logged in using the avatar element
 function isLoggedIn() {
 	if (
-		document.getElementsByClassName("nav-item user_add")[0].firstElementChild.title == "Регистрация"
+		!document.getElementsByClassName("nav-item user_add")[0]
 	) {
 		return true;
 	} else {
