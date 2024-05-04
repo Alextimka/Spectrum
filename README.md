@@ -19,11 +19,6 @@ Tested on Chrome, Edge, Opera, Firefox and Yandex Browser
 ![image](https://github.com/Alextimka/Spectrum/assets/59509074/0fa0d203-ea7e-4b7d-be0a-43c877be93ed)
 
 <br>
-<p>No rules notification</p>
-
-![image](https://github.com/Alextimka/Spectrum/assets/59509074/a0d3e22d-d5bd-42e6-ba6c-0c7f3db9a971)
-
-<br>
 <p>Rounded edges</p>
 
 ![image](https://github.com/Alextimka/Spectrum/assets/59509074/b3c58ee1-59ca-413e-9f1e-72627d1c889b)
