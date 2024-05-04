@@ -59,7 +59,8 @@ pre,
 .ui-widget-header .ui-state-default,
 .ui-button,
 html .ui-button.ui-state-disabled:hover,
-html .ui-button.ui-state-disabled:active {
+html .ui-button.ui-state-disabled:active,
+.nm-pinned-msg {
 	color: #fff !important;
 }
 .btn-primary,
@@ -161,7 +162,8 @@ option,
 .tox .tox-dialog__header,
 .tox .tox-dialog__footer,
 .tox .tox-dropzone,
-.nm-body {
+.nm-body,
+.nm-pinned-msg {
 	background-color: #1b1b1b !important;
 }
 .btn-light,
@@ -429,4 +431,7 @@ a.text-dark:hover,
 }
 img[src="/templates/modern/images/404.svg"] {
     filter: invert(1) hue-rotate(347deg);
+}
+.nm-pinned-msg {
+    border-bottom: 1px solid #102b3e !important;
 }
