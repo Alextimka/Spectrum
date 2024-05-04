@@ -23,11 +23,6 @@
 	border-radius: 0.5rem;
 }
 
-/* Delete rules notification in messages */
-.nm-pinned-msg {
-	display: none;
-}
-
 /* Theme switch hover color change */
 a.text-light:hover > img,
 a.text-light:focus > img {
