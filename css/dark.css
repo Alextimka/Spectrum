@@ -435,3 +435,6 @@ img[src="/templates/modern/images/404.svg"] {
 .nm-pinned-msg {
     border-bottom: 1px solid #102b3e !important;
 }
+html {
+    scrollbar-color: #595959 #272626;
+}
