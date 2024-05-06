@@ -437,4 +437,5 @@ img[src="/templates/modern/images/404.svg"] {
 }
 html {
     scrollbar-color: #595959 #272626;
+	scrollbar-width: thin;
 }
