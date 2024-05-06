@@ -29,6 +29,7 @@ a.text-light:focus > img {
 }
 
 /* Make the scrollbar thin */
-html {
+html,
+#nm-dialog * {
 	scrollbar-width: thin;
 }
