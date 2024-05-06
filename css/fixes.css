@@ -1,7 +1,5 @@
 /* Move messages button to the left */
 #scroll-top {
-	/* left: 1rem !important;
-	right: unset !important; */
 	right: 5rem !important;
 }
 
@@ -28,4 +26,9 @@ a.text-light:hover > img,
 a.text-light:focus > img {
 	filter: brightness(0.8);
 	cursor: pointer;
+}
+
+/* Make the scrollbar thin */
+html {
+	scrollbar-width: thin;
 }
