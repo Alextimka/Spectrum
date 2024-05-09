@@ -68,14 +68,11 @@ async function latest() {
 }
 
 // Insert features function
-function insert() {
+async function insert() {
 	try {
 		// Append theme switch
 		document.querySelector(".py-2").appendChild(thswitch);
 	} catch {}
-}
-
-async function insertAfter() {
 	try {
 		var isLogged = isLoggedIn();
 		if (!isLogged) {
@@ -114,6 +111,7 @@ async function insertAfter() {
 			.append(credit);
 	} catch {}
 }
+
 // Hide the page until it is fully loaded
 document.documentElement.style.visibility = "hidden";
 
@@ -177,8 +175,10 @@ const currVer = parseFloat(credText.substr(credText.length - 3));
 const creditImg = document.createElement("img");
 
 // Show the page when it is fully loaded and append features
-window.onload = () => {
+document.addEventListener("DOMContentLoaded", () => {
 	insert();
-	document.documentElement.style.visibility = "";
-	insertAfter();
-};
+	setTimeout(() => {
+		document.documentElement.style.visibility = "";
+	}, 150);
+});
+
