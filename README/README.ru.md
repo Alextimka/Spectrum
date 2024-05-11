@@ -4,6 +4,8 @@
 
 [![GitHub Release](https://img.shields.io/github/v/release/Alextimka/Spectrum?label=&style=flat&logo=github)](https://github.com/Alextimka/Spectrum/releases/latest/download/Spectrum.zip)
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/Alextimka/Spectrum/total?label=Скачивания&color=red)
+[![GitHub Release](https://img.shields.io/badge/Firefox%20-%20?style=flat&logo=firefoxbrowser&labelColor=%23595959&color=%23595959
+)](https://addons.mozilla.org/en-GB/firefox/addon/spectrum39)
 
 Расширение Spectrum добавляет новые функции для сайта spectr39s.ru
 
