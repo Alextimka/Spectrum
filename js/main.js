@@ -44,7 +44,11 @@ function isLoggedIn() {
 	) {
 		return true;
 	} else {
-		return false;
+        if(document.getElementsByClassName("nav-item user_add")[0].firstElementChild.title=="Регистрация"){
+    		return false;
+        } else {
+            return true;
+        }
 	}
 }
 
