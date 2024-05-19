@@ -438,3 +438,6 @@ img[src="/templates/modern/images/404.svg"] {
 html {
     scrollbar-color: #595959 #272626;
 }
+.markItUp .markItUpHeader ul li:hover {
+    background-color: #1a695f;
+}
