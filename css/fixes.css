@@ -17,7 +17,8 @@
 .m-1,
 .conversation-body > .msg-content .bb_tag_code,
 .content_list.featured .ft_image a,
-.carousel-inner {
+.carousel-inner,
+.value.text-muted > a > img {
 	border-radius: 0.5rem;
 }
 
@@ -36,5 +37,5 @@ html,
 
 /* Resize banner for android */
 .navbar-brand {
-    max-width: 45vw;
+	max-width: 45vw;
 }
