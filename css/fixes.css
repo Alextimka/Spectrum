@@ -39,3 +39,16 @@ html,
 .navbar-brand {
 	max-width: 45vw;
 }
+
+/* Resize nm */
+#nm-dialog {
+	max-width: 85% !important;
+	max-height: 85% !important;
+	border-radius: 10px !important;
+}
+.nm-left {
+	width: 21% !important;
+}
+.nm-right {
+	width: 79% !important;
+}

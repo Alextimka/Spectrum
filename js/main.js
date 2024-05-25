@@ -120,6 +120,7 @@ async function insert() {
 document.documentElement.style.visibility = "hidden";
 
 // If cookie is null or NaN reset back to 0
+let darkbg;
 let themeid;
 tempcookie = getCookie("themeid");
 if (
@@ -137,7 +138,7 @@ if (
 
 // Append dark theme css
 if (themeid == 1) {
-	const darkbg = Object.assign(document.createElement("style"), {
+	darkbg = Object.assign(document.createElement("style"), {
 		innerHTML: `html > body {
 			background-color: #1b1b1b !important;
 		}`,
@@ -184,5 +185,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	setTimeout(() => {
 		document.documentElement.style.visibility = "";
 	}, 150);
+	if (themeid == 1) {
+		darkbg.remove();
+	}
 });
 
