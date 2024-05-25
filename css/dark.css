@@ -1,16 +1,17 @@
+@charset "UTF-8";
 :root {
-	/* text */
-	--text-white: #fff;
-	--text-dark: #1e2224;
-	--text-lgrey: #aeaeae;
-	--link-color: #75bad6;
-
 	/* bg */
 	--dark-bg: #1b1b1b;
 	--darker-bg: #252525;
 	--grey-bg: #313131;
 	--light-bg: #606060;
 	--widget-bg: #2e2e2e;
+
+	/* text */
+	--text-white: #fff;
+	--text-dark: #1e2224;
+	--text-lgrey: #aeaeae;
+	--link-color: #75bad6;
 
 	/* nm */
 	--nm-bg: #102b3e;
