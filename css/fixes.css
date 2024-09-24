@@ -52,3 +52,12 @@ html,
 .nm-right {
 	width: 79% !important;
 }
+
+@media (max-width: 520px) {
+    .nm-contacts-open .nm-content>.nm-right {
+        width: 100% !important;
+	}
+	.nm-content>.nm-left {
+        width: 100% !important;
+    }
+}
