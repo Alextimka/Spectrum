@@ -3,17 +3,6 @@ if (typeof browser === "undefined") {
 	var browser = chrome;
 }
 
-// Get User id
-function getUserId() {
-	try {
-		return document
-			.getElementsByClassName("nav-item profile")[0]
-			.firstElementChild.href.split("/")[4];
-	} catch {
-		return null;
-	}
-}
-
 // Cookie functions
 function setCookie(name, value, days) {
 	var expires;
@@ -78,6 +67,8 @@ async function insert() {
 		document.querySelector(".py-2").appendChild(thswitch);
 	} catch {}
 	try {
+		// Check if the user is logged in
+		// If not, reset theme cookie
 		var isLogged = isLoggedIn();
 		if (!isLogged) {
 			var expTheme = getCookie("expirationTheme");
@@ -97,16 +88,19 @@ async function insert() {
 		}
 	} catch {}
 	try {
+		// Replace logo with high quality one
+		document.getElementsByClassName("d-sm-none")[0].src = "/upload/000/u1/e/8/e83ef3bf.png";
+	}	catch {}
+	try {
 		// Check if a newer version is available
 		if (currVer < (await latest())) {
 			credText += `%20(${browser.i18n.getMessage("creditImg")})`;
 		}
+		creditImg.src = `https://img.shields.io/badge/Spectrum%20v${credText}-4d4d4d?logo=github`;
+
+		// Append credit
+		credit.append(creditImg);
 	} catch {}
-	creditImg.src = `https://img.shields.io/badge/Spectrum%20v${credText}-4d4d4d?logo=github`;
-
-	// Append credit
-	credit.append(creditImg);
-
 	try {
 		document
 			.getElementsByClassName(

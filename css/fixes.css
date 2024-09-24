@@ -46,11 +46,13 @@ html,
 	max-height: 85% !important;
 	border-radius: 10px !important;
 }
+
 .nm-left {
-	width: 21% !important;
+	width: 15% !important;
 }
+
 .nm-right {
-	width: 79% !important;
+	width: 85% !important;
 }
 
 @media (max-width: 520px) {

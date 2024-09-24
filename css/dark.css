@@ -316,10 +316,13 @@ a.text-dark:hover,
 /* background-color: #2e2e2e */
 #widget_wrapper_150,
 #widget_wrapper_153,
-.info_bar {
+.info_bar{
 	background-color: var(--widget-bg) !important;
 }
 
+.card {
+	background-color: var(--widget-bg);
+}
 /* nm messages */
 .conversation-item.item-right .conversation-body {
 	float: right;
