@@ -319,7 +319,12 @@ a.text-dark:hover,
 .info_bar{
 	background-color: var(--widget-bg) !important;
 }
-
+.navbar-light .navbar-toggler-icon {
+	filter: invert(1);
+}
+.navbar-light .navbar-toggler {
+	border-color: rgb(255 255 255 / 37%);
+}
 .card {
 	background-color: var(--widget-bg);
 }
@@ -456,9 +461,6 @@ a.text-dark:hover,
 .chosen-container-single .chosen-single abbr {
 	background-color: #0000 !important;
 	box-shadow: none !important;
-}
-#nm-overlay {
-	backdrop-filter: blur(3px);
 }
 img[src="/templates/modern/images/404.svg"] {
 	filter: invert(1) hue-rotate(347deg);

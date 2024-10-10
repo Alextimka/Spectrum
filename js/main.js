@@ -9,9 +9,7 @@ function setCookie(name, value, days) {
 	if (days == 0) {
 		expires = "; expires=;";
 	} else {
-		expires = `; expires=${new Date(
-			Date.now() + days * 864e5
-		).toUTCString()}`;
+		expires = `; expires=${new Date(Date.now() + days * 864e5).toUTCString()}`;
 	}
 	document.cookie = `${name}=${value}${expires}; path=/`;
 }
@@ -27,17 +25,15 @@ function getCookie(name) {
 }
 
 // Check if user is logged in using the avatar element
-function isLoggedIn() {
-	if (
-		!document.getElementsByClassName("nav-item user_add")[0]
-	) {
+function isLogged() {
+	if (!document.getElementsByClassName("nav-item user_add")[0]) {
 		return true;
 	} else {
-        if(document.getElementsByClassName("nav-item user_add")[0].firstElementChild.title=="Регистрация"){
-    		return false;
-        } else {
-            return true;
-        }
+		if(document.getElementsByClassName("nav-item user_add")[0].firstElementChild.title=="Регистрация"){
+			return false;
+		} else {
+			return true;
+		}
 	}
 }
 
@@ -51,9 +47,7 @@ function switchTheme() {
 
 // Get latest version
 async function latest() {
-	let ver = await fetch(
-		"https://api.github.com/repos/Alextimka/Spectrum/tags"
-	)
+	let ver = await fetch("https://api.github.com/repos/Alextimka/Spectrum/tags")
 		.then((response) => response.json())
 		.then((json) => json[0].name);
 	ver = parseFloat(ver.substr(ver.length - 3));
@@ -62,28 +56,21 @@ async function latest() {
 
 // Insert features function
 async function insert() {
+	var isLoggedIn = isLogged();
 	try {
 		// Append theme switch
-		document.querySelector(".py-2").appendChild(thswitch);
+		if (isLoggedIn)	document.querySelector(".py-2").appendChild(thswitch);
 	} catch {}
 	try {
 		// Check if the user is logged in
 		// If not, reset theme cookie
-		var isLogged = isLoggedIn();
-		if (!isLogged) {
-			var expTheme = getCookie("expirationTheme");
-			if (expTheme == 1 && themeid == 1) {
+		if (!isLoggedIn) {
+			if (themeid == 1) {
 				themeid = 0;
 				setCookie("themeid", themeid, 0);
-				setCookie("expirationTheme", 0, 364);
 				location.reload();
 			}
-			if (expTheme == 1) {
-				setCookie("expirationTheme", 0, 364);
-				setCookie("themeid", themeid, 0);
-			}
 		} else {
-			setCookie("expirationTheme", 1, 364);
 			setCookie("themeid", themeid, 364);
 		}
 	} catch {}
@@ -103,9 +90,7 @@ async function insert() {
 	} catch {}
 	try {
 		document
-			.getElementsByClassName(
-				"d-flex align-items-center text-muted icms-links-inherit-color"
-			)[0]
+			.getElementsByClassName("d-flex align-items-center text-muted icms-links-inherit-color")[0]
 			.append(credit);
 	} catch {}
 }
@@ -117,14 +102,8 @@ document.documentElement.style.visibility = "hidden";
 let darkbg;
 let themeid;
 tempcookie = getCookie("themeid");
-if (
-	tempcookie == null ||
-	tempcookie == "NaN" ||
-	tempcookie > 1 ||
-	tempcookie < 0
-) {
+if (tempcookie == null ||	tempcookie == "NaN" || tempcookie > 1 || tempcookie < 0) {
 	setCookie("themeid", 0, 364);
-	setCookie("expirationTheme", 1, 364);
 	themeid = 0;
 } else {
 	themeid = parseInt(tempcookie);

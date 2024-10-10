@@ -55,6 +55,11 @@ html,
 	width: 85% !important;
 }
 
+/* Blur nm background */
+#nm-overlay {
+	backdrop-filter: blur(3px);
+}
+
 @media (max-width: 520px) {
     .nm-contacts-open .nm-content>.nm-right {
         width: 100% !important;
@@ -63,3 +68,4 @@ html,
         width: 100% !important;
     }
 }
+
