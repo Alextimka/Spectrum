@@ -19,9 +19,12 @@
 .content_list.featured .ft_image a,
 .carousel-inner,
 .value.text-muted > a > img {
-	border-radius: 0.5rem;
+	border-radius: 0.5rem !important;
 }
-
+#desktop_device_type .icms-menu-hovered .dropdown:hover > .dropdown-menu,
+#desktop_device_type .icms-user-menu:not(.show):hover > .dropdown-menu {
+	border-radius: 0 0 0.5rem 0.5rem !important;
+}
 /* Theme switch hover color change */
 a.text-light:hover > img,
 a.text-light:focus > img {
