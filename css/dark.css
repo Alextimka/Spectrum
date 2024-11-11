@@ -477,7 +477,4 @@ html {
 .dropdown-menu {
 	box-shadow: 0 0.5rem 1rem var(--dark-bg);
 }
-#desktop_device_type .icms-menu-hovered .dropdown:hover > .dropdown-menu,
-#desktop_device_type .icms-user-menu:not(.show):hover > .dropdown-menu {
-	border-radius: 0 0 0.5rem 0.5rem;
-}
+
