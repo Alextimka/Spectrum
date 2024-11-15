@@ -136,6 +136,7 @@ const themeSvg = Object.assign(document.createElement("img"), {
 // Theme switch
 const thswitch = Object.assign(document.createElement("a"), {
 	classList: "text-light ml-2",
+	href: "#"
 });
 thswitch.append(themeSvg);
 thswitch.addEventListener("click", switchTheme);
